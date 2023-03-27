@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Js</title>
+    <script src="app.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app" class="contenedor">
+        <div>
+            <h2>Objecto:</h2>
+            <p>{{ myObject }}</p>
+            -----------------------------------------------------------------------
+            <h2>Array:</h2>
+            <ul>
+                <li v-for="(item, index) in myArray" :key="index">{{ item }}</li>
+            </ul>
+            <button @click="removeFirstItem">Eliminar primer elemento</button>
+            <button @click="removeLastItem">Eliminar último elemento</button>
+            <button @click="addFirstItem">Agregar al inicio</button>
+            <button @click="addLastItem">Agregar al final</button> <br>
+            ----------------------------------------------------------------------
+            <h2>Array de objectos:</h2>
+            <ul>
+                <li v-for="(item, index) in myObjectArray" :key="index">{{ item.id }} - {{ item.name }}</li>
+            </ul>
+            ------------------------------------------------------------------------
+            <h2>Iterando objectos con for:</h2>
+            <ul>
+                <li v-for="(value, key) in myObject">
+                    {{ key }}: {{ value }}
+                </li>
+            </ul>
+            ------------------------------------------------------------------------
+            <h2>Iterando objectos con forEach:</h2>
+            <ul>
+                <li v-for="value in myArray">
+                    {{ value }}
+                </li>
+            </ul>
+            -------------------------------------------------------------------------
+            <h2>Iterando objectos con Map:</h2>
+            <ul>
+                <li v-for="value in myArrayMapped">
+                    {{ value }}
+                </li>
+            </ul>
+            --------------------------------------------------------------------------
+            <h2>Proceso personal:</h2>
+            <p>{{ mensaje }}</p>
+            <input v-model="inputValue" />
+            <button @click="processInput">Procesar</button>
+        </div>
+</body>
+
+</html>

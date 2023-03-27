@@ -10,11 +10,13 @@ export default {
       ],
       inputValue: '',
       myMessage: '',
+      mensaje: ''
+
     };
   },
   computed: {
     myArrayMapped() {
-      return this.myArray.map((item, index) => `${index + 2}. ${item}`);
+      return this.myArray.map((item, index) => `${index + 1}. ${item}`);
     },
   },
   methods: {

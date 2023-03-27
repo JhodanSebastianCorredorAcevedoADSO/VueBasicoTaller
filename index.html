@@ -52,9 +52,9 @@
             </ul>
             --------------------------------------------------------------------------
             <h2>Proceso personal:</h2>
+            <input v-model="inputValue">
+            <button @click.prevent="processInput">Procesar</button>
             <p>{{ mensaje }}</p>
-            <input v-model="inputValue" />
-            <button @click="processInput">Procesar</button>
         </div>
 </body>
 
